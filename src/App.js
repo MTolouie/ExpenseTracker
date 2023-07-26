@@ -24,9 +24,14 @@ function App() {
     },
   ];
 
+  function onModifyExpenseData(modifiedExpenseData){
+    expenses.push(modifiedExpenseData);
+    console.log(expenses);
+  }
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onModifyExpenseData={onModifyExpenseData}/>
       <Expenses expenses={expenses} />
     </div>
   );
