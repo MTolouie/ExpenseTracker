@@ -18,7 +18,7 @@ function Expenses(props) {
       <ExpensesFilter selectedYear={year} onSelectYearChangedHandler={onSelectYearChangedHandler}/>
        
        {
-       props.expenses.map(expense =>  <ExpenseItem expense={expense} />)
+       props.expenses.map(expense =>  <ExpenseItem expense={expense} key={expense.id} />)
        }
        
       </Card>
