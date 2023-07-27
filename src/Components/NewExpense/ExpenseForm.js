@@ -38,6 +38,9 @@ function ExpenseForm(props) {
 
     }
 
+    function onCancelBtnClicked(event){
+      props.onCancelBtnClicked();
+    }
 
   return (
     <form onSubmit={submitFormHandler}>
@@ -56,6 +59,7 @@ function ExpenseForm(props) {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={onCancelBtnClicked}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
