@@ -28,14 +28,14 @@ function App() {
   const [expenses,setExpenses] = useState(DUMMY_EXPENSES);
 
   function onModifyExpenseData(modifiedExpenseData){
-    
     setExpenses((prevExpenses) =>{ return [modifiedExpenseData,...prevExpenses]});
   }
+
 
   return (
     <div>
       <NewExpense onModifyExpenseData={onModifyExpenseData}/>
-      <Expenses expenses={expenses}  />
+      <Expenses expenses={expenses} />
     </div>
   );
 }
